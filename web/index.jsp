@@ -12,22 +12,22 @@
             
           <tr>
 		<td colspan ="3">
-		<h1 id="h0">Consulta tu rutina recomendada de ejercicios</h1>
+		<h1>Consulta tu rutina recomendada de ejercicios</h1>
 		</td>
           </tr>  
             
           <tr>
-				<td id=>
+				<td>
 				
-				<h1 id="h1">Sexo</h1>
+				<h1>Sexo</h1>
 				
 				</td>
-				<td id=>
+				<td>
 				
-				<select tabindex="3" id="Tipo_c" name="Tipo_c">
+				<select tabindex="3" id="Sexo" name="Sexo">
                 			<option value="">Seleccione una opcion</option>
-                			<option value="cliente">Hombre</option>
-                			<option value="proveedor">Mujer</option>
+                			<option value="Hombre">Hombre</option>
+                			<option value="Mujer">Mujer</option>
 
                 			</select>
 				</td>
@@ -40,12 +40,13 @@
 			
 
 			<tr>
-				<td id="col12">
+				<td>
 				
-				<h1 id="h2">Estatura</h1>
+				<h1>Estatura</h1>
 				
 				</td>
-				<td id="col22">
+                                
+				<td>
 				
                                     <h1><input type="text" id="Estatura" name="Estatura"></input>  m</h1>
 				
@@ -53,13 +54,13 @@
 			</tr>
 
 			<tr>
-				<td id="col13">
+				<td>
 				
-				<h1 id="h3">peso</h1>
+				<h1>peso</h1>
 				
 				</td>
-				<td id="col23">
-				<h1><input type="text" id="Cll" name="Cll"></input>  Kg</h1>
+				<td>
+				<h1><input type="text" id="Peso" name="Peso"></input>  Kg</h1>
 				
 				</td>
 			</tr>

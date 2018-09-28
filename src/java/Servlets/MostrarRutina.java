@@ -5,6 +5,9 @@
  */
 package Servlets;
 
+import Logica.Hombre;
+import Logica.Mujer;
+import Logica.Persona;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -20,6 +23,18 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "MostrarRutina", urlPatterns = {"/MostrarRutina"})
 public class MostrarRutina extends HttpServlet {
 
+    static Persona p;
+    public static void Liskov(Persona g){
+        
+       g.setGenero();
+       g.setEstatura(1);
+       g.setPeso(1);
+       g.setImc();
+       g.setResistencia();
+ 
+       p=g;
+       
+    }
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -31,7 +46,21 @@ public class MostrarRutina extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         response.setContentType("text/html;charset=UTF-8");
+        
+        if("Hombre".equals(request.getParameter("Sexo"))){
+             Liskov(new Hombre());
+        } else if("Mujer".equals(request.getParameter("Sexo"))){
+             Liskov(new Mujer());
+        }
+        
+        p.setEstatura(Double.parseDouble(request.getParameter("Estatura")));
+        p.setPeso(Integer.parseInt(request.getParameter("Peso")));
+        p.setImc();
+        p.setResistencia();
+
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -44,12 +73,12 @@ public class MostrarRutina extends HttpServlet {
             out.println("<table border=2>");
             
             out.println("<tr>");
-                out.println("<td >");
+                out.println("<td>");
                 out.println("<h2>Su IMC es: </h2>");  
                 out.println("</td>");     
                 
-                out.println("<td colspan=2>");
-                out.println("<h2>hola</h2>");
+                out.println("<td colspan=2 >");
+                out.println("<h2>"+ p.getEstado() +"</h2>");
                out.println("</td>");
                
             out.println("</tr>");
@@ -57,7 +86,7 @@ public class MostrarRutina extends HttpServlet {
             out.println("<tr>");
             
                out.println("<td colspan=3>");
-                   out.println("<h2>su rutina es</h2>");
+                   out.println("<h2>Su rutina es</h2>");
                out.println("</td>");   
                
             out.println("</tr>");

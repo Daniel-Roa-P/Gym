@@ -1,23 +1,22 @@
 
 package Logica;
 
-
-public class RutinaPesoBajo extends Rutina {
+public class RutinaSobrepeso extends Rutina {
     
     @Override
     public void setLunes(){
     
-        this.ejercicio="Flexiones de pecho por 3 seciones";
-        this.dieta="2300 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad/2)+" "+ejercicio+"\n"+"dieta de: "+dieta;
+        this.ejercicio="Cardio por 12 kilometos";
+        this.dieta="2100 kcal";
+        this.actividades="ejercicio: "+ejercicio+"\n"+"dieta de: "+dieta;
         
     }
     
     @Override
     public void setMartes(){
     
-        this.ejercicio="Pesas de 5 kilos con descandos de 20 levantamientos";
-        this.dieta="2500 kcal";
+        this.ejercicio="Abdominales por 2 seciones";
+        this.dieta="2200 kcal";
         this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n"+"dieta de: "+dieta;
         
     }
@@ -25,8 +24,8 @@ public class RutinaPesoBajo extends Rutina {
     @Override
     public void setMiercoles(){
     
-        this.ejercicio="Abdominales por 3 seciones";
-        this.dieta="2420 kcal";
+        this.ejercicio="Saltos de cuerda por 3 seciones";
+        this.dieta="2050 kcal";
         this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n"+"dieta de: "+dieta;
         
     }
@@ -34,20 +33,19 @@ public class RutinaPesoBajo extends Rutina {
     @Override
     public void setJueves(){
     
-        this.ejercicio="Sentadillas por 4 seciones";
+        this.ejercicio="Bicicleta fija 5 millas";
         this.dieta="2350 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad/2)+" "+ejercicio+"\n"+"dieta de: "+dieta;
+        this.actividades="ejercicio: "+ejercicio+"\n"+"dieta de: "+dieta;
         
     }
     
     @Override
     public void setViernes(){
     
-        this.ejercicio="Barras con descansos de a 15";
-        this.dieta="2600 kcal";
+        this.ejercicio="flexiones de pecho por 2 seciones";
+        this.dieta="2000 kcal";
         this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n"+"dieta de: "+dieta;
         
     }
-
     
 }

@@ -9,6 +9,10 @@ import Logica.Hombre;
 import Logica.Mujer;
 import Logica.Persona;
 import Logica.Rutina;
+import Logica.RutinaObesidad;
+import Logica.RutinaPesoBajo;
+import Logica.RutinaPesoNormal;
+import Logica.RutinaSobrepeso;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -34,10 +38,15 @@ public class MostrarRutina extends HttpServlet {
        
     }
     
-    public static void Liskov2(Persona g){
+    public static void Liskov2(Rutina n){
         
-       g.setGenero();
-       p=g;
+       n.setIntensidad(1);
+       n.setLunes();
+       n.setMartes();
+       n.setMiercoles();
+       n.setJueves();
+       n.setViernes();
+       r=n;
        
     }
     /**
@@ -65,6 +74,15 @@ public class MostrarRutina extends HttpServlet {
         p.setImc();
         p.setResistencia();
         
+        if(p.getImc()<=18.5){
+            Liskov2(new RutinaPesoBajo());
+        } else if(p.getImc()>18.5 && p.getImc()<=25){
+            Liskov2(new RutinaPesoNormal());
+        } else if(p.getImc()>25 && p.getImc()<=30){
+            Liskov2(new RutinaSobrepeso());
+        } else if(p.getImc()>30){
+            Liskov2(new RutinaObesidad());
+        }        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -75,7 +93,7 @@ public class MostrarRutina extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<table border=2>");
-            
+            r.setIntensidad(p.getResistencia());
             out.println("<tr>");
                 out.println("<td>");
                 out.println("<h2>Su IMC es: </h2>");  
@@ -96,77 +114,65 @@ public class MostrarRutina extends HttpServlet {
             out.println("</tr>");
             
             out.println("<tr>");
-                
+                r.setLunes();
                 out.println("<td>");
                     out.println("<h2>Lunes: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>hola</h2>");
+               out.println("<h2>"+r.getActividades()+"</h2>");
                out.println("</td>");
                
-               out.println("<td rowspan=6>");
+               out.println("<td rowspan=5>");
                out.println("<img src=\"https://static.vecteezy.com/system/resources/previews/000/087/319/non_2x/gym-logo-template-vector.jpg\"></img>");
                out.println("</td>");
             
             out.println("</tr>");
             
             out.println("<tr>");
-            
+                r.setMartes();
                 out.println("<td>");
                     out.println("<h2>Martes: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>hola</h2>");
+               out.println("<h2>"+r.getActividades()+"</h2>");
                out.println("</td>");
             
             out.println("</tr>");
             
             out.println("<tr>");
-               
+                r.setMiercoles();
                 out.println("<td>");
                     out.println("<h2>Miercoles: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>hola</h2>");
+               out.println("<h2>"+r.getActividades()+"</h2>");
                out.println("</td>");
             
             out.println("</tr>");
             
             out.println("<tr>");
-                
+                r.setJueves();
                 out.println("<td>");
                     out.println("<h2>Jueves: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>hola</h2>");
+               out.println("<h2>"+r.getActividades()+"</h2>");
                out.println("</td>");
             
             out.println("</tr>");
             
             out.println("<tr>");
-            
+                r.setViernes();
                 out.println("<td>");
                     out.println("<h2>Viernes: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>hola</h2>");
-               out.println("</td>");
-            
-            out.println("</tr>");
-            
-            out.println("<tr>");
-                
-                out.println("<td>");
-                    out.println("<h2>Sabado: </h2>");
-               out.println("</td>");   
-                
-               out.println("<td>");
-               out.println("<h2>hola</h2>");
+               out.println("<h2>"+r.getActividades()+"</h2>");
                out.println("</td>");
             
             out.println("</tr>");

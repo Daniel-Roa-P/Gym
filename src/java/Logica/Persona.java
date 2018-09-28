@@ -30,4 +30,12 @@ public class Persona {
     public String getEstado() {
         return estado;
     }
+    
+    public double getImc() {
+        return imc;
+    }
+    
+    public int getResistencia() {
+        return resistencia;
+    }
 }

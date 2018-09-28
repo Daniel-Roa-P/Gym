@@ -8,7 +8,7 @@ public class RutinaPesoNormal extends Rutina{
     
         this.ejercicio="Abdominales por 4 seciones";
         this.dieta="2400 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     
@@ -17,7 +17,7 @@ public class RutinaPesoNormal extends Rutina{
     
         this.ejercicio="Flexiones de pecho por 2 seciones";
         this.dieta="2650 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad/2)+" "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+Double.toString(intensidad/2)+" "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     
@@ -26,7 +26,7 @@ public class RutinaPesoNormal extends Rutina{
     
         this.ejercicio="Sentadillas por 5 seciones";
         this.dieta="2500 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad/4)+" "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+Double.toString(intensidad/4)+" "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     
@@ -35,7 +35,7 @@ public class RutinaPesoNormal extends Rutina{
     
         this.ejercicio="Cardio 10 kilometros";
         this.dieta="2700 kcal";
-        this.actividades="ejercicio: "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     
@@ -44,7 +44,7 @@ public class RutinaPesoNormal extends Rutina{
     
         this.ejercicio="Bicicleta fija 3 millas";
         this.dieta="2400 kcal";
-        this.actividades="ejercicio: "+" "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+" "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     

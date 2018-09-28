@@ -8,7 +8,7 @@ public class RutinaObesidad extends Rutina{
     
         this.ejercicio="Saltos de cuerda 4 veces";
         this.dieta="2400 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     
@@ -17,7 +17,7 @@ public class RutinaObesidad extends Rutina{
     
         this.ejercicio="cardio por 16 kilometros";
         this.dieta="2550 kcal";
-        this.actividades="ejercicio: "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     
@@ -26,7 +26,7 @@ public class RutinaObesidad extends Rutina{
     
         this.ejercicio="Bicicleta fija 7 millas";
         this.dieta="2430 kcal";
-        this.actividades="ejercicio: "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     
@@ -35,7 +35,7 @@ public class RutinaObesidad extends Rutina{
     
         this.ejercicio="Cardio por 10 kilometros";
         this.dieta="2850 kcal";
-        this.actividades="ejercicio: "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+ejercicio+"\n,dieta de: "+dieta;
         
     }
     
@@ -44,7 +44,7 @@ public class RutinaObesidad extends Rutina{
     
         this.ejercicio="abdominales por seciones de a 3";
         this.dieta="2510 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\ndieta de: "+dieta;
+        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n,dieta de: "+dieta;
         
     
     }

@@ -42,7 +42,7 @@ public class RutinaPesoNormal extends Rutina{
     @Override
     public void setViernes(){
     
-        this.ejercicio="Bicibleta fija 3 millas";
+        this.ejercicio="Bicicleta fija 3 millas";
         this.dieta="2400 kcal";
         this.actividades="ejercicio: "+" "+ejercicio+"\ndieta de: "+dieta;
         

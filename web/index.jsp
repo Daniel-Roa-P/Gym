@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="paso_cadenas.js" language='JavaScript1.2'></script>
         <link type="text/css" rel="stylesheet" href="EstiloIndex.css"/>
         <title>Gym</title>
     </head>
@@ -48,7 +49,7 @@
                                 
 				<td>
 				
-                                    <h1><input type="text" id="Estatura" name="Estatura"></input>  m</h1>
+                                    <h1><input type="text" id="Estatura" name="Estatura"/> m</h1>
 				
 				</td>
 			</tr>
@@ -60,18 +61,16 @@
 				
 				</td>
 				<td>
-				<h1><input type="text" id="Peso" name="Peso"></input>  Kg</h1>
+				<h1><input type="text" id="Peso" name="Peso"/> Kg</h1>
 				
 				</td>
 			</tr>
                         
-                        <tr>
-                            
-                            <td colspan ="3">  
-                        <input type="submit" value="Consultar">
-                            </td>
-                            
-                        </tr>
+                        <td colspan ="3">
+				
+                        <input type="submit" value="Consultar" onclick="validar()"></input>						
+
+			</td>
         </table>
         </form>
     </body>

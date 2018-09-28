@@ -8,6 +8,7 @@ package Servlets;
 import Logica.Hombre;
 import Logica.Mujer;
 import Logica.Persona;
+import Logica.Rutina;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -24,14 +25,18 @@ import javax.servlet.http.HttpServletResponse;
 public class MostrarRutina extends HttpServlet {
 
     static Persona p;
+    static Rutina r;
+    
     public static void Liskov(Persona g){
         
+       g.setGenero(); 
+       p=g;
+       
+    }
+    
+    public static void Liskov2(Persona g){
+        
        g.setGenero();
-       g.setEstatura(1);
-       g.setPeso(1);
-       g.setImc();
-       g.setResistencia();
- 
        p=g;
        
     }
@@ -59,7 +64,6 @@ public class MostrarRutina extends HttpServlet {
         p.setPeso(Integer.parseInt(request.getParameter("Peso")));
         p.setImc();
         p.setResistencia();
-
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */

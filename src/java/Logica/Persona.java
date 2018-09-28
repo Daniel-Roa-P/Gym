@@ -27,14 +27,6 @@ public class Persona {
         
     }  
     
-    public int getResistencia() {
-        return resistencia;
-    }
-
-    public double getImc() {
-        return imc;
-    }
-    
     public String getEstado() {
         return estado;
     }

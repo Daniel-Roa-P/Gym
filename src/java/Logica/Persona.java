@@ -25,14 +25,14 @@ public class Persona {
         
         imc=(peso/Math.pow(estatura, 2));
         
-    }  
-    
-    public String getEstado() {
-        return estado;
-    }
+    } 
     
     public double getImc() {
         return imc;
+    }
+    
+    public String getEstado() {
+        return estado;
     }
     
     public int getResistencia() {

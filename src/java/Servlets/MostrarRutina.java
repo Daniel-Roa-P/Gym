@@ -28,13 +28,13 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "MostrarRutina", urlPatterns = {"/MostrarRutina"})
 public class MostrarRutina extends HttpServlet {
 
-    static Persona p;
-    static Rutina r;
+    static Persona persona;
+    static Rutina rutina;
     
     public static void Liskov(Persona g){
         
        g.setGenero(); 
-       p=g;
+       persona=g;
        
     }
     
@@ -46,7 +46,7 @@ public class MostrarRutina extends HttpServlet {
        n.setMiercoles();
        n.setJueves();
        n.setViernes();
-       r=n;
+       rutina=n;
        
     }
     /**
@@ -69,18 +69,18 @@ public class MostrarRutina extends HttpServlet {
              Liskov(new Mujer());
         }
         
-        p.setEstatura(Double.parseDouble(request.getParameter("Estatura")));
-        p.setPeso(Integer.parseInt(request.getParameter("Peso")));
-        p.setImc();
-        p.setResistencia();
+        persona.setEstatura(Double.parseDouble(request.getParameter("Estatura")));
+        persona.setPeso(Integer.parseInt(request.getParameter("Peso")));
+        persona.setImc();
+        persona.setResistencia();
         
-        if(p.getImc()<=18.5){
+        if(persona.getImc()<=18.5){
             Liskov2(new RutinaPesoBajo());
-        } else if(p.getImc()>18.5 && p.getImc()<=25){
+        } else if(persona.getImc()>18.5 && persona.getImc()<=25){
             Liskov2(new RutinaPesoNormal());
-        } else if(p.getImc()>25 && p.getImc()<=30){
+        } else if(persona.getImc()>25 && persona.getImc()<=30){
             Liskov2(new RutinaSobrepeso());
-        } else if(p.getImc()>30){
+        } else if(persona.getImc()>30){
             Liskov2(new RutinaObesidad());
         }        
         try (PrintWriter out = response.getWriter()) {
@@ -93,14 +93,14 @@ public class MostrarRutina extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<table border=2>");
-            r.setIntensidad(p.getResistencia());
+            rutina.setIntensidad(persona.getResistencia());
             out.println("<tr>");
                 out.println("<td>");
                 out.println("<h2>Su IMC es: </h2>");  
                 out.println("</td>");     
                 
                 out.println("<td colspan=2 >");
-                out.println("<h2>"+ p.getEstado() +"</h2>");
+                out.println("<h2>"+ persona.getEstado() +"</h2>");
                out.println("</td>");
                
             out.println("</tr>");
@@ -114,13 +114,13 @@ public class MostrarRutina extends HttpServlet {
             out.println("</tr>");
             
             out.println("<tr>");
-                r.setLunes();
+                rutina.setLunes();
                 out.println("<td>");
                     out.println("<h2>Lunes: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>"+r.getActividades()+"</h2>");
+               out.println("<h2>"+rutina.getActividades()+"</h2>");
                out.println("</td>");
                
                out.println("<td rowspan=5>");
@@ -130,49 +130,49 @@ public class MostrarRutina extends HttpServlet {
             out.println("</tr>");
             
             out.println("<tr>");
-                r.setMartes();
+                rutina.setMartes();
                 out.println("<td>");
                     out.println("<h2>Martes: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>"+r.getActividades()+"</h2>");
+               out.println("<h2>"+rutina.getActividades()+"</h2>");
                out.println("</td>");
             
             out.println("</tr>");
             
             out.println("<tr>");
-                r.setMiercoles();
+                rutina.setMiercoles();
                 out.println("<td>");
                     out.println("<h2>Miercoles: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>"+r.getActividades()+"</h2>");
+               out.println("<h2>"+rutina.getActividades()+"</h2>");
                out.println("</td>");
             
             out.println("</tr>");
             
             out.println("<tr>");
-                r.setJueves();
+                rutina.setJueves();
                 out.println("<td>");
                     out.println("<h2>Jueves: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>"+r.getActividades()+"</h2>");
+               out.println("<h2>"+rutina.getActividades()+"</h2>");
                out.println("</td>");
             
             out.println("</tr>");
             
             out.println("<tr>");
-                r.setViernes();
+                rutina.setViernes();
                 out.println("<td>");
                     out.println("<h2>Viernes: </h2>");
                out.println("</td>");   
                 
                out.println("<td>");
-               out.println("<h2>"+r.getActividades()+"</h2>");
+               out.println("<h2>"+rutina.getActividades()+"</h2>");
                out.println("</td>");
             
             out.println("</tr>");

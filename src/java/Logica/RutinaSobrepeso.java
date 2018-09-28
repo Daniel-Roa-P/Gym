@@ -8,7 +8,7 @@ public class RutinaSobrepeso extends Rutina {
     
         this.ejercicio="Cardio por 12 kilometos";
         this.dieta="2100 kcal";
-        this.actividades="ejercicio: "+ejercicio+"\n"+"dieta de: "+dieta;
+        this.actividades="ejercicio: "+ejercicio+"\ndieta de: "+dieta;
         
     }
     
@@ -17,7 +17,7 @@ public class RutinaSobrepeso extends Rutina {
     
         this.ejercicio="Abdominales por 2 seciones";
         this.dieta="2200 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n"+"dieta de: "+dieta;
+        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\ndieta de: "+dieta;
         
     }
     
@@ -26,7 +26,7 @@ public class RutinaSobrepeso extends Rutina {
     
         this.ejercicio="Saltos de cuerda por 3 seciones";
         this.dieta="2050 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n"+"dieta de: "+dieta;
+        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\ndieta de: "+dieta;
         
     }
     
@@ -35,7 +35,7 @@ public class RutinaSobrepeso extends Rutina {
     
         this.ejercicio="Bicicleta fija 5 millas";
         this.dieta="2350 kcal";
-        this.actividades="ejercicio: "+ejercicio+"\n"+"dieta de: "+dieta;
+        this.actividades="ejercicio: "+ejercicio+"\ndieta de: "+dieta;
         
     }
     
@@ -44,7 +44,7 @@ public class RutinaSobrepeso extends Rutina {
     
         this.ejercicio="flexiones de pecho por 2 seciones";
         this.dieta="2000 kcal";
-        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\n"+"dieta de: "+dieta;
+        this.actividades="ejercicio: "+Double.toString(intensidad)+" "+ejercicio+"\ndieta de: "+dieta;
         
     }
     
